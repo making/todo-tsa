@@ -9,8 +9,8 @@ import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
-import javax.inject.Named;
-import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import repository.Rest;
@@ -20,8 +20,8 @@ import repository.TodoRepository;
  *
  * @author maki
  */
-@Named(value = "todoManagedBean")
-@RequestScoped
+@ManagedBean(name = "todoManagedBean")
+@ViewScoped
 public class TodoManagedBean {
     private static final Logger LOGGER = Logger.getLogger(TodoManagedBean.class.getName());
 
@@ -46,7 +46,7 @@ public class TodoManagedBean {
     }
 
     public void reload() {
-        // do nothing
+        findAll();
     }
     
     public void findAll() {
