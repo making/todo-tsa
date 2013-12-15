@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="120.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="todo.app.TodoController">
+  <children>
+    <Button id="button" fx:id="createButton" layoutX="220.0" layoutY="37.0" onAction="#handleCreate" prefHeight="21.999908447265625" text="Create" />
+    <Label fx:id="label" layoutX="33.0" layoutY="66.0" minHeight="16.0" minWidth="69.0" />
+    <TextField id="name" fx:id="todoTitle" layoutX="33.0" layoutY="36.0" onAction="#handleCreate" prefWidth="162.0" />
+  </children>
+</AnchorPane>
